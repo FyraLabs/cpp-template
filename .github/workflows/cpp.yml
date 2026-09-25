@@ -20,6 +20,6 @@ jobs:
     uses: FyraLabs/actions/.github/workflows/cpp.yml@main
     with:
       container: ghcr.io/ultramarine-linux/ultramarine:44
-      configure: meson -B build
-      build: meson compile -C build
-      test: meson test -C build --print-errorlogs
+      configure-command: meson -B build
+      build-command: meson compile -C build
+      test-command: meson test -C build --print-errorlogs
