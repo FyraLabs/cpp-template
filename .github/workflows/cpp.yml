@@ -1,0 +1,24 @@
+name: C++ CI
+"on":
+  push:
+    paths:
+      - "src/**"
+      - "tests/**"
+      - "meson_options.txt"
+      - "README.md"
+      - ".clang-format"
+      - ".clang-tidy"
+      - ".github/workflows/cpp.yml"
+      - "meson.build"
+
+jobs:
+  ci:
+    permissions:
+      contents: read
+      security-events: write
+    uses: FyraLabs/actions/.github/workflows/cpp-ci.yml@main
+    with:
+      container: ghcr.io/ultramarine-linux/ultramarine:44
+      configure: meson -B build
+      build: meson compile -C build
+      test: meson test -C build --print-errorlogs
