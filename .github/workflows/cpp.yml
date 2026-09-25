@@ -10,6 +10,7 @@ name: C++ CI
       - ".clang-tidy"
       - ".github/workflows/cpp.yml"
       - "meson.build"
+  workflow_dispatch:
 
 jobs:
   ci:
