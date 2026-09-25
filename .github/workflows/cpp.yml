@@ -17,7 +17,7 @@ jobs:
     permissions:
       contents: read
       security-events: write
-    uses: FyraLabs/actions/.github/workflows/cpp-ci.yml@main
+    uses: FyraLabs/actions/.github/workflows/cpp.yml@main
     with:
       container: ghcr.io/ultramarine-linux/ultramarine:44
       configure: meson -B build
