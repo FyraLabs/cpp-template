@@ -1,5 +1,7 @@
 # C++ Template
 
+Maintained by Cypress Reed ([cypress@fyralabs.com](mailto:cypress@fyralabs.com))
+
 A small, reusable C++23 project template using [Meson](https://mesonbuild.com/) and Ninja.
 It includes a static library, an example executable, and a dependency-free test executable.
 
